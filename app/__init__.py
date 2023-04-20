@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
-from flask import Flask
+from flask import Blueprint
 
+index_bp = Blueprint("index", __name__)  # url_prefix默认为空
+task_bp = Blueprint("task", __name__, url_prefix="/task")
 
-def create_app():
-    app = Flask(__name__)
-    # app.config.from_object(config_by_name[config_name])
-    # db.init_app(app)
-    # flask_bcrypt.init_app(app)
-
-    return app
+from .main.controller import main, task

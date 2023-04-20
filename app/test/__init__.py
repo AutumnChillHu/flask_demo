@@ -1,3 +1,5 @@
 # -*- coding: utf-8 -*-
-class DBOperation(object):
+
+
+if __name__ == "__main__":
     pass

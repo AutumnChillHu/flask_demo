@@ -10,7 +10,7 @@ class HttpStatusCode(Enum):
     ARGS_ERROR = (400, "参数错误")
 
 
-def response_dict(status_code=None, code=None, msg=None, data=None, **kwargs):
+def response_format(status_code=None, code=None, msg=None, data=None, **kwargs):
     response = {"data": data}
     response["code"] = status_code.value[0] if status_code else code
     response["msg"] = status_code.value[1] if status_code else msg

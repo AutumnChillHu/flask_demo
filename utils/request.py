@@ -31,7 +31,7 @@ def request_attrs():
     print(request.files, type(request.files))
 
 
-def get_request_params():
+def get_request_args():
     if request.method == 'GET':
         # MultiDict/ImmutableMultiDict格式，如果key不存在，会返回HTTP 400
         # 推荐转化成Dict，如果key不存在，会报KeyError
